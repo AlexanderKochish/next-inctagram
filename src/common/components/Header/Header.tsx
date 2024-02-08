@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Header.module.scss'
 import Link from 'next/link'
-import Button from '../ui/Button/Button'
+import {Button} from '../ui/Button/Button'
 
 type Props = {}
 
@@ -20,10 +20,10 @@ const Header = (props: Props) => {
             </select>
           </li>
           <li>
-            <Button text='Log In' clazz="link"/>
+            <Button variant="text">Log In</Button>
           </li>
           <li>
-            <Button text="Sign up" clazz="primary"/>
+            <Button>Sign Up</Button>
           </li>
         </ul>
       </nav>

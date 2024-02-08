@@ -1,27 +1,59 @@
 .primary {
-    background-color: #397DF6;
+    background-color: var(--color-accent-500);
     border-radius: 2px;
-    padding: 5px 12px;
+    padding: 6px 24px;
     color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
     &:hover {
-        background: #568cea;
+        background: var(--color-accent-100);
         transition: all .3s ease;
     }
 }
-
-.link {
-    background-color: inherit;
+.secondary {
+    background-color: var(--color-dark-300);
     border-radius: 2px;
-    padding: 5px 12px;
-    color: #397DF6;
+    padding: 6px 24px;
+    color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
     &:hover {
-        background: rgba($color: #ffffff, $alpha: .1);
+        background: var(--color-dark-100);
         transition: all .3s ease;
     }
+}
+
+.outline {
+    background-color: inherit;
+    border-radius: 2px;
+    padding: 5px 23px;
+    color: var(--color-accent-500);
+    border: 1px solid var(--color-accent-500);
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        color: var(--color-accent-100);
+        border-color: var(--color-accent-100);
+        transition: all .3s ease;
+    }
+}
+
+.text {
+    background-color: inherit;
+    border-radius: 2px;
+    padding: 6px 24px;
+    color: var(--color-accent-500);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        color: var(--color-accent-100);
+        transition: all .3s ease;
+    }
+}
+
+.fullWidth {
+    width: 100vh;
 }
