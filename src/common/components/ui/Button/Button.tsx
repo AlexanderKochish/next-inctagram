@@ -3,7 +3,7 @@ import s from './Button.module.scss'
 
 type Props<T extends ElementType = 'button'> = {
     as?: T,
-    variant?: 'primary' | 'secondary' | 'outline' | 'text',
+    variant?: 'primary' | 'secondary' | 'outline' | 'link',
     fullWidth?: boolean,
     children: ReactNode,
     className?: string

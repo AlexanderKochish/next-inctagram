@@ -1,24 +1,57 @@
-import type { Meta, StoryObj } from "@storybook/react";
-// import Button from "./Button";
-
-// const meta: Meta<typeof Button> = {
-//   title: "Components/Button",
-//   component: Button,
-// };
-
-// export default meta;
-// type Story = StoryObj<typeof Button>;
-
-// export const Primary: Story = {
-//   args: {
-//     text: "button",
-//     clazz: "primary",
-//   },
-// };
-
-// export const Link: Story = {
-//   args: {
-//     text: "button",
-//     clazz: "link",
-//   },
-// };
+import type { Meta, StoryObj } from '@storybook/react'
+ 
+import { Button } from './Button'
+ 
+const meta = {
+  tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'outline', 'link'],
+      control: { type: 'radio' },
+    },
+  },
+  title: 'Components/Button',
+  component: Button,
+} satisfies Meta<typeof Button>
+ 
+export default meta
+type Story = StoryObj<typeof meta>
+ 
+export const Primary: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Primary Button',
+    disabled: false,
+  },
+}
+ 
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Secondary Button',
+    disabled: false,
+  },
+}
+export const Tertiary: Story = {
+  args: {
+    variant: 'outline',
+    children: 'Tertiary Button',
+    disabled: false,
+  },
+}
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    children: 'Tertiary Button',
+    disabled: false,
+  },
+}
+ 
+export const FullWidth: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Full Width Button',
+    disabled: false,
+    fullWidth: true,
+  },
+}

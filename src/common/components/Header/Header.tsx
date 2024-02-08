@@ -20,7 +20,7 @@ const Header = (props: Props) => {
             </select>
           </li>
           <li>
-            <Button variant="text">Log In</Button>
+            <Button variant="link">Log In</Button>
           </li>
           <li>
             <Button>Sign Up</Button>
