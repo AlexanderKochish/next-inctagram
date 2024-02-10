@@ -1,59 +1,100 @@
+.button {
+    all: unset;
+    user-select: none;
+
+    padding: 6px 24px;
+    color: var(--color-light-100);
+    border-radius: 2px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .2s linear;
+
+    :focus-visible {
+        border: 1px solid var(--color-accent-700);
+    }
+}
+
 .primary {
     background-color: var(--color-accent-500);
-    border-radius: 2px;
-    padding: 6px 24px;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+    
     &:hover {
         background: var(--color-accent-100);
-        transition: all .3s ease;
+    }
+
+    &:active {
+        background: var(--color-accent-700);
+    }
+
+    &:disabled {
+        background: var(--color-accent-900);
+        color: var(--color-light-900);
     }
 }
 .secondary {
     background-color: var(--color-dark-300);
-    border-radius: 2px;
-    padding: 6px 24px;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+
     &:hover {
         background: var(--color-dark-100);
-        transition: all .3s ease;
+    }
+
+    &:active {
+        background: inherit;
+    }
+
+    &:disabled {
+        background: var(--color-dark-500);
+        color: var(--color-light-900);
     }
 }
 
 .outline {
     background-color: inherit;
-    border-radius: 2px;
     padding: 5px 23px;
     color: var(--color-accent-500);
     border: 1px solid var(--color-accent-500);
-    font-size: 16px;
-    cursor: pointer;
+
     &:hover {
         color: var(--color-accent-100);
         border-color: var(--color-accent-100);
-        transition: all .3s ease;
+    }
+
+    &:active {
+        border-color: var(--color-accent-700);
+        color: var(--color-accent-700);
+    }
+
+    &:disabled {
+        background: inherit;
+        color: var(--color-accent-900);
     }
 }
 
 .link {
     background-color: inherit;
-    border-radius: 2px;
-    padding: 6px 24px;
     color: var(--color-accent-500);
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+
     &:hover {
         color: var(--color-accent-100);
-        transition: all .3s ease;
+    }
+
+    &:active {
+        background: inherit;
+        color: var(--color-accent-700);
+    }
+
+    &:disabled {
+        color: var(--color-accent-900);
     }
 }
 
 .fullWidth {
-    width: 100vh;
+    width: 100%;
 }
