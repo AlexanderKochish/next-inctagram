@@ -7,6 +7,7 @@ import MetaHead from "@/common/components/MetaHead/MetaHead";
 import { getLayout } from "@/common/components/Layout/Layout";
 import {Button} from "@/common/components/ui/Button/Button";
 import { Input } from "@/common/components/ui/TextField/TextField";
+import Typography from "@/common/components/ui/Typography/Typography";
 
 const inter = Inter({ subsets: ["latin"] });
 
