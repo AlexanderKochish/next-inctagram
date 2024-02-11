@@ -1,0 +1,11 @@
+.input {
+    all: unset;
+    user-select: none;
+}
+
+.default {
+    outline: none;
+    border: 1px solid var(--color-light-500);
+    padding: 2px 5px;
+    color: var(--color-dark-500);
+}

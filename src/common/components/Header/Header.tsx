@@ -23,7 +23,7 @@ const Header = (props: Props) => {
             <Button variant="link">Log In</Button>
           </li>
           <li>
-            <Button>Sign Up</Button>
+            <Link href={'/auth/registration'}><Button>Sign Up</Button></Link>
           </li>
         </ul>
       </nav>
