@@ -6,6 +6,7 @@ import { DialogClose } from "./DialogClose/DialogClose";
 const meta = {
     title: 'Components/Dialog',
     component: Dialog,
+    tags: ['autodocs']
 } satisfies Meta<typeof Dialog>
 
 export default meta
