@@ -1,15 +1,19 @@
-import React, { ElementType } from 'react'
+import React, {Component, ComponentPropsWithoutRef, ElementType, ReactNode} from 'react'
 import s from './Card.module.scss'
+import clsx from "clsx";
 
 type Props<T extends ElementType = 'div'> = {
     as?: T,
-    
-}
-
-const Card = (props: Props) => {
+    children?: ReactNode
+    className?: string
+} & ComponentPropsWithoutRef<T>
+const Card = ({ children, as, className, ...rest }: Props) => {
+    const Component = as || 'div'
+    const finallyStyle = clsx(s.card, className)
   return (
-    <div>Card</div>
+    <Component {...rest} className={finallyStyle}>
+        {children}
+    </Component>
   )
 }
-
 export default Card
