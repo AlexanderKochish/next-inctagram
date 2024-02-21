@@ -1,0 +1,60 @@
+.input {
+    all: unset;
+    user-select: none;
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        color: var(--color-light-100);
+        border: 1px solid var(--color-light-900);
+        padding: 4px 15px;
+        font-size: var(--font-size-m);
+        border-radius: 2px;
+        min-width: 280px;
+        margin: 0 0 20px 0;
+
+        &.error {
+            border: 1px solid var(--color-danger-500);
+        }
+    }
+
+    &_icon {
+       display: flex;
+        & > svg {
+            margin: auto;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+
+    &_error {
+        margin: -20px 0 0 0;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--color-danger-500);
+    }
+}
+
+.label {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-light-900);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: inherit;
+    color: var(--color-light-100);
+}
+
+.default {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    width: 100%;
+    font-size: var(--font-size-m);
+}

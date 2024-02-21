@@ -1,0 +1,100 @@
+.form {
+  max-width: 392px;
+  min-height: 200px;
+  border: 1px solid var(--color-dark-300);
+  background-color: var(--color-dark-500);
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  & > h1 {
+    margin-bottom: 20px;
+  }
+
+  &_network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    & > div {
+      margin: 0 30px;
+    }
+  }
+}
+
+.input {
+  background-color: inherit;
+  border: 1px solid var(--color-dark-300);
+  color: var(--color-light-100);
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  outline: var(--color-accent-500);
+  border-radius: 2px;
+
+  &:focus-visible {
+    border: 1px solid var(--color-accent-500);
+  }
+}
+
+.password_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-dark-500);
+  border: 1px solid var(--color-dark-300);
+  color: var(--color-light-100);
+  padding: 5px 10px;
+  outline: 1px solid transparent;
+  margin-bottom: 20px;
+
+  border-radius: 2px;
+
+  & > input {
+    background-color: inherit;
+    color: var(--color-light-100);
+    outline: none;
+    border: none;
+  }
+
+  &:focus-within {
+    border: 1px solid var(--color-accent-500);
+    outline-color: var(--color-accent-500);
+  }
+}
+
+.politics {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  & > p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  & > input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+
+  & > p {
+    margin: 10px 0 15px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-light-900);
+}

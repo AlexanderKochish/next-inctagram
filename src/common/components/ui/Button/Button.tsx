@@ -20,6 +20,7 @@ export const Button = <T extends ElementType = 'button'>(
     children,
     ...rest
   } = props
+  
   const Component = as || 'button'
   const finishClassName = clsx(`${s.button} ${s[variant]} ${fullWidth? s.fullWidth : ''} ${className}`)
   
