@@ -6,17 +6,26 @@ import { Button } from '@/common/components/ui/Button/Button'
 import Link from 'next/link'
 import Typography from '@/common/components/ui/Typography/Typography'
 import {TextField} from "@/common/components/ui/TextField/TextField";
+import {SubmitHandler, useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import { SignUpSchemaType, SignUpSchema } from "@/common/model/signUpSchema";
 
 type Props = {
-    register: any,
-    handleSubmit: any,
-    onSubmit: any,
-    errors: any,
+    disabled?: boolean,
+    onSubmit: (data: SignUpSchemaType) => void
 }
 export const SignUpForm = (props: Props) => {
-    const { register, handleSubmit, onSubmit, errors } = props
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<SignUpSchemaType>({ resolver: zodResolver(SignUpSchema)})
+    const { onSubmit, disabled } = props
+    const onSubmitHandler: SubmitHandler<SignUpSchemaType> = (data: SignUpSchemaType) => {
+        onSubmit(data)
+    }
     return (
-            <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
+            <form className={s.form} onSubmit={handleSubmit(onSubmitHandler)}>
                 <Typography as='h1' variant='h1' textAlign='center'>Sign Up</Typography>
                 <div className={s.form_network}>
                     <div>
@@ -54,7 +63,7 @@ export const SignUpForm = (props: Props) => {
                     <input type="checkbox" />
                     <p>I agree to the <Typography as='span' variant='smallLink'>Terms of Service</Typography> and <Typography as='span' variant='smallLink'>Privacy Policy</Typography></p>
                 </div>
-                <Button fullWidth>Sign Up</Button>
+                <Button disabled={disabled} fullWidth>Sign Up</Button>
                 <div className={s.footer}>
                     <p>Do you have an account?</p>
                     <Link href={'/auth/login'}>
