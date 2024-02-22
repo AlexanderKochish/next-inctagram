@@ -1,7 +1,7 @@
 import s from './SignUpForm.module.scss'
 import Image from 'next/image'
-import googleIcon from '../../../../../public/google-svgrepo-com 1.png'
-import gitIcon from '../../../../../public/google-svgrepo-com 2.png'
+import googleIcon from '../../../../../../public/google-svgrepo-com 1.png'
+import gitIcon from '../../../../../../public/google-svgrepo-com 2.png'
 import { Button } from '@/common/components/ui/Button/Button'
 import Link from 'next/link'
 import Typography from '@/common/components/ui/Typography/Typography'
@@ -31,11 +31,11 @@ export const SignUpForm = (props: Props) => {
     onSubmit(data)
   }
   return (
-    <Card>
-      <form className={s.form} onSubmit={handleSubmit(onSubmitHandler)}>
-        <Typography as="h1" variant="h1" textAlign="center">
-          Sign Up
-        </Typography>
+    <Card className={s.form}>
+      <Typography as="h1" variant="h1" textAlign="center">
+        Sign Up
+      </Typography>
+      <form onSubmit={handleSubmit(onSubmitHandler)}>
         <div className={s.form_network}>
           <div>
             <Image src={gitIcon} width={36} height={36} alt="git icon" />
