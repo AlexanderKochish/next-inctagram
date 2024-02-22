@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Header.module.scss'
 import Link from 'next/link'
-import {Button} from '../ui/Button/Button'
+import { Button } from '../ui/Button/Button'
 
 type Props = {}
 
@@ -9,9 +9,7 @@ const Header = (props: Props) => {
   return (
     <header className={style.header}>
       <nav>
-        <Link href={'/'}>
-          Inctagram
-        </Link>
+        <Link href={'/'}>Inctagram</Link>
         <ul>
           <li>
             <select>
@@ -23,7 +21,9 @@ const Header = (props: Props) => {
             <Button variant="link">Log In</Button>
           </li>
           <li>
-            <Link href={'/auth/registration'}><Button>Sign Up</Button></Link>
+            <Link href={'/auth/registration'}>
+              <Button>Sign Up</Button>
+            </Link>
           </li>
         </ul>
       </nav>

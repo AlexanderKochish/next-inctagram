@@ -9,11 +9,9 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-    <Header/>
-    <SideBar/>
-    <main> 
-      {children}
-    </main>
+      <Header />
+      <SideBar />
+      <main>{children}</main>
     </>
   )
 }
@@ -21,9 +19,5 @@ const Layout = ({ children }: Props) => {
 export default Layout
 
 export const getLayout = (page: ReactElement) => {
-  return (
-    <Layout>
-      {page}
-    </Layout>
-  )
+  return <Layout>{page}</Layout>
 }
