@@ -23,13 +23,11 @@ export const Button = <T extends ElementType = 'button'>(
   } = props
 
   const Component = as || 'button'
-  const finallyClassName = clsx(
-    `${s.button} ${s[variant]} ${fullWidth ? s.fullWidth : ''} ${className}`,
-  )
-
+  const finishClassName = clsx(`${s.button} ${s[variant]} ${fullWidth? s.fullWidth : ''} ${className}`)
+  
   return (
-    <Component className={finallyClassName} {...rest}>
-      {children}
+    <Component className={finishClassName} {...rest}>
+      { children }
     </Component>
   )
 }
