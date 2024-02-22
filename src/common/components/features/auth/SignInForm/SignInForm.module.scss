@@ -1,0 +1,36 @@
+.input {
+  background-color: inherit;
+  border: 1px solid var(--color-dark-300);
+  color: var(--color-light-100);
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  outline: var(--color-accent-500);
+  border-radius: 2px;
+
+  &:focus-visible {
+    border: 1px solid var(--color-accent-500);
+  }
+}
+
+.forgot_password {
+  width: 100%;
+  padding: 10px 0;
+  text-align: end;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+
+  & > p {
+    margin: 10px 0 15px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-light-900);
+}
