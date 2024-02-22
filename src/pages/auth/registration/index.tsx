@@ -1,5 +1,5 @@
 import s from './SignUp.module.scss'
-import { SignUpForm } from '@/common/components/features/auth/SignUpForm'
+import { SignUpForm } from '@/common/components/features/auth/SignUpForm/SignUpForm'
 
 type Props = {}
 
