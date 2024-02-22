@@ -1,11 +1,11 @@
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import s from "./BackToPage.module.scss";
+import { ArrowLeftIcon } from '@radix-ui/react-icons'
+import Link from 'next/link'
+import s from './BackToPage.module.scss'
 
 type Props = {
-  linkText: string;
-  link: string;
-};
+  linkText: string
+  link: string
+}
 
 const BackToPage = ({ linkText, link }: Props) => {
   return (
@@ -16,7 +16,7 @@ const BackToPage = ({ linkText, link }: Props) => {
     //   </div>
     // </Link>
     <></>
-  );
-};
+  )
+}
 
-export default BackToPage;
+export default BackToPage

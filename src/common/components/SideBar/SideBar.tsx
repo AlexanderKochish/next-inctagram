@@ -5,12 +5,14 @@ import DialogModal from '../ui/Dialog/Dialog'
 type Props = {}
 
 const SideBar = (props: Props) => {
-  const[child, setChild] = useState(false)
+  const [child, setChild] = useState(false)
   return (
     <aside className={s.sidebar}>
       <ul>
         <li>Home</li>
-        <li><DialogModal/></li>
+        <li>
+          <DialogModal />
+        </li>
         <li>My Profile</li>
         <li>Messenger</li>
         <li>Search</li>
@@ -21,9 +23,7 @@ const SideBar = (props: Props) => {
         <li>Favorites</li>
       </ul>
 
-      <div>
-        Log Out
-      </div>
+      <div>Log Out</div>
     </aside>
   )
 }
